@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  web:
+    image: nginx:alpine
+    ports:
+      - "8020:80"
+    volumes:
+      - ./app1:/usr/share/nginx/html
+
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3000:80"
